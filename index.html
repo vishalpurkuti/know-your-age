@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Age in Days</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/index.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="app">
+            <h1 class="know">Know Your Age</h1>
+            <label>Select Date</label> <input type="datetime-local" id="datepicker" class="picker" onchange="reset()"
+                placeholder="Pick Date">
+            <h1 id="yearAnswer" class="answer"></h1>
+            <h1 id="monthAnswer" class="answer"></h1>
+            <h1 id="weekAnswer" class="answer"></h1>
+            <h1 id="ageAnswer" class="answer"></h1>
+            <h1 id="hourAnswer" class="answer"></h1>
+            <h1 id="minuteAnswer" class="answer"></h1>
+            <h1 id="secondAnswer" class="answer"></h1>
+            <!-- <h1 id="gtAnswer" class="answer"></h1> -->
+            <div class="button-wrap">
+                <button class="success btn" id="clickme" onclick="ageInYear();">Years</button>
+                <button class="success btn" id="clickme" onclick="ageInMonth();">Months</button>
+                <button class="success btn" id="clickme" onclick="ageInWeek();">Weeks</button>
+                <button class="success btn" id="clickme" onclick="ageInDays();">Days</button>
+                <button class="success btn" id="clickme" onclick="ageInHour();">Hours</button>
+                <button class="success btn" id="clickme" onclick="ageInMinute();">Minute</button>
+                <button class="success btn" id="clickme" onclick="ageInSecond();">Second</button>
+
+                <button class="warning btn" onclick="reset('ageAnswer')">Reset</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="static/main.js"></script>
+</body>
+
+</html>
