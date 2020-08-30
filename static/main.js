@@ -1,10 +1,13 @@
+var t;
 const reset = () => {
+    clearInterval(t);
     for (let i = 0; i < 7; i++) {
         document.querySelectorAll('.answer')[i].innerHTML = "";
 
     }
 
 }
+
 
 const ageInDays = () => {
     let a = document.getElementById('datepicker').value;
@@ -72,7 +75,7 @@ const ageInMinute = () => {
     (minuteDiff >= 0) ? (document.getElementById('minuteAnswer').innerHTML = answer) : (document.getElementById('minuteAnswer').innerHTML = "You are not born yet!!");
 
 }
-const ageInSecond = () => {
+function ageInSecond() {
     let a = document.getElementById('datepicker').value
     let odate = new Date(a);
     let cdate = new Date();
@@ -81,16 +84,11 @@ const ageInSecond = () => {
     (secondDiff >= 0) ? (document.getElementById('secondAnswer').innerHTML = answer) : (document.getElementById('secondAnswer').innerHTML = "You are not born yet!!");
 
 }
-const ageInTotal = () => {
-    let a = document.getElementById('datepicker').value
-    let odate = new Date(a);
-    let cdate = new Date();
-    let total = cdate.getTime() - odate.getTime();
-    let gtotal = new Date(total);
-    (gtotal >= 0) ? (document.getElementById('gtAnswer').innerHTML = gtotal) : (document.getElementById('gtAnswer').innerHTML = "You are not born yet!!");
+var second = () => {
+
+    t = setInterval(ageInSecond, 1000);
 
 }
-
 
 
 
