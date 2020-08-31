@@ -1,6 +1,8 @@
 var t;
+var m;
 const reset = () => {
     clearInterval(t);
+    clearInterval(m);
     for (let i = 0; i < 7; i++) {
         document.querySelectorAll('.answer')[i].innerHTML = "";
 
@@ -65,6 +67,7 @@ const ageInHour = () => {
 
 }
 
+
 const ageInMinute = () => {
     let a = document.getElementById('datepicker').value
     let odate = new Date(a);
@@ -73,6 +76,7 @@ const ageInMinute = () => {
     let minuteDiff = Math.round((cdate.getTime() - odate.getTime()) / (1000 * 60));
     let answer = `You are <span> ${minuteDiff} </span> Minutes old`;
     (minuteDiff >= 0) ? (document.getElementById('minuteAnswer').innerHTML = answer) : (document.getElementById('minuteAnswer').innerHTML = "You are not born yet!!");
+
 
 }
 function ageInSecond() {
@@ -89,8 +93,9 @@ var second = () => {
     t = setInterval(ageInSecond, 1000);
 
 }
-
-
+var minute = () => {
+    m = setInterval(ageInMinute, 1000);
+}
 
 
 
