@@ -9,11 +9,11 @@ html{
 }
 .container{
     width: 100%;
-    min-height: 100vh;
+    min-height:100vh;
     background:#2c3e50;
     display: grid;
     place-items: center center;
-
+    max-height: auto;
 }
 .app{
  
@@ -88,7 +88,34 @@ font-weight: bold;
 font-size:1.7rem;
 color:#e74c3c;
 }
+.social{
 
+    width: 60%;
+    height: 8vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.media{
+    height: auto;
+    max-width: 150px;
+    min-width: 150px;
+
+    margin: 10px;
+    text-align: center;
+}
+.media h2{
+    font-size:xx-large;    
+}
+.media h2 a{
+    color: white;
+}
+.media h2:hover{
+    transform:scale(1.2);
+}
 @media screen and (max-width:600px){
 [type="datetime-local"] {
     background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  90% 50% no-repeat ;
@@ -120,6 +147,12 @@ color:#e74c3c;
 .answer{
     font-size:1.5rem;
 }
+.social{
+    width: 99%;
+    justify-content: center;
+    padding-bottom:20px ;
+}
+
 }
 
 @media(prefers-color-scheme:dark){
